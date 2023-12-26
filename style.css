@@ -1,12 +1,20 @@
 *{
-    margin: 0;
+    margin: 0%;
+    padding: 0%;
     font-family: arial;
     border: border-box;
 }
 
+body{
+    height: 100%;
+    width: 100%;
+}
 
 .navbar{
-    height: 60px;
+    position: relative;
+    z-index: 100;
+    width: 100%;
+    height: 8.7vh;
     background-color: #0f1111;
     color: white;
     display: flex;
@@ -20,42 +28,43 @@
 }
 .border:hover{
     border: 1.5px solid white;
+    border-radius: 2px;
 }
 
 
 /*navbar box1*/
 .nav-logo{
-    height: 50px;
-    width: 100px;
+    width: 7vmax;
+    height: 8vmin;
 }
-.logo{
-    background-image: url("amazon_logo.png");
-    background-size: cover;
-    height: 50px;
-    width: 100%;
+.nav-logo img{
+    width: 7vmax;
+    height: 8vmin;
 }
 
 
 /*navbar box2*/
 .add-first{
     color: #cccccc;
-    font-size: 0.85rem;
-    margin-left: 15px;
+    font-size: 1.75vmin;
+    margin-left: 1.75vmax;
 }
 .add-second{
-    font-size: 1rem;
-    margin-left: 3px;
+    font-size: 2vmin;
+    margin-left: 0.2vmax;
 }
 .add-icon{
     display: flex;
+    margin-left: 1vw;
+    font-size: 2vmin;
 }
 
 
 /*navbar box3*/
 .nav-search{
     display: flex;
-    width: 620px;
-    height: 40px;
+    width: 40vw;
+    height: 6vmin;
     border-radius: 4px;
     justify-content: space-evenly;
 }
@@ -64,7 +73,7 @@
 }
 .search-select{
     background-color: #f3f3f3;
-    width: 50px;
+    width: 5vmin;
     text-align: center;
     border-top-left-radius: 4px;
     border-bottom-left-radius: 4px;
@@ -72,15 +81,15 @@
 }
 .search-input{
     width: 100%;
-    font-size: 1rem;
+    font-size: 2vmin;
     border: none;
 }
 .search-icon{
-    width: 45px;
+    width: 3.5vw;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 1.2rem;
+    font-size: 2.5vmin;
     background-color: #febd68;
     border-top-right-radius: 4px;
     border-bottom-right-radius: 4px;
@@ -90,27 +99,29 @@
 
 /*navbar box4 and 5*/
 span{
-    font-size: 0.7rem;
+    font-size: 1.75vmin;
 }
 .nav-second{
-    font-size: 0.85rem;
+    font-size: 1.85vmin;
     font-weight: 700;
+    margin-bottom: 1%;
 }
 
 
 /*navbar box6*/
 .nav-cart i{
-    font-size: 30px;
+    font-size: 3vmin;
 }
 .nav-cart{
-    font-size: 0.85rem;
+    font-size: 1.85vmin;
     font-weight: 700;
 }
 
 
 /*panel*/
 .panel{
-    height: 40px;
+    width: 100%;
+    height: 5.5vmin;
     background-color: #222f3d;
     display: flex;
     color: white;
@@ -118,28 +129,30 @@ span{
     justify-content: space-evenly;
 }
 
+.panel-all{
+    font-size: 2vmin;
+}
+
 .panel-ops p{
     display: inline;
-    margin-left: 15px;
+    margin-left: 1vw;
 }
 
 .panel-ops{
     width: 70%;
-    font-size: 0.85rem;
+    font-size: 2vmin;
 }
 
 .panel-deals{
-    font-size: 0.9rem;
+    font-size: 2.25vmin;
     font-weight: 700;
 }
-
-
 
 /*hero section*/
 .hero-section{
     background-image: url(hero\ image\ ak.jpg);
     background-size: cover;
-    height: 320px;
+    height: 45vh;
     display: flex;
     justify-content: center;
     align-items: flex-end;
@@ -148,48 +161,81 @@ span{
 .hero-msg{
     background-color: white;
     color: black;
-    height: 40px;
+    height: 5.5vh;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 0.85rem;
+    font-size: 1vmax;
     width: 95%;
-    margin-bottom: 25px;
+    margin-bottom: 3vh;
 }
 
 .hero-msg a{
     color: #007185;
-
+    z-index: 20;
 }
 
-
+@media (max-width:600px){
+    .hero-section{
+        height: 20vh;
+    }
+}
 
 /*shop-section*/
 .shop-section{
+    height:min-content;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
     background-color: rgb(207, 239, 213);
 }
 .box{
-    height: 400px;
+    height: 26vmax;
     width: 21.8%;
     background-color: white;
-    padding: 20px 0px 15px;
-    margin-top: 15px;
+    padding: 2.5vh 0px 1.5vh;
+    margin-top: 1.75vh;
 }
 .box-img{
-    height: 300px;
+    height: 40vh;
     background-size: cover;
-    margin-top: 1rem;
-    margin-bottom: 1rem;
+    margin: 2vh 0; 
 }
 .box-content{
-    margin-left: 1rem;
-    margin-right: 1rem;
+    margin: 0 1.25vw; 
+}
+.box-content h2{
+    font-size: 3vmin;
 }
 .box-content p{
     color: #007185;
+}
+
+@media (max-width:1024px){
+    .shop-section{
+        max-height: 150vmax;
+    }
+    .box{
+        height: 20vmax;
+        width: 30vmin;
+        padding: 2vmin 0;
+    }
+    .box-img{
+        height: 15vmax;
+        margin: 1vmin 0;
+    }
+    .box-content h2{
+        font-size: 2vmin;
+    }
+    .box-content p{
+        font-size: 1.5vmin;
+    }
+}
+
+@media (min-width:700px) and (max-width:1024px){
+    .hero-section{
+        height: 20vh;
+    }
 }
 
 
@@ -201,33 +247,34 @@ footer{
 .foot-panel1{
     background-color: #37475a;
     color: white;
-    height: 50px;
+    height: 7vmin;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 0.85rem;
+    font-size: 1vmax;
 }
 
 .foot-panel2{
     background-color: #222f3d;
     color: white;
-    height: 300px;
+    height: 40vmin;
     display: flex;
     justify-content: space-evenly;
 }
 
 ul{
-    margin-top: 30px;
+    margin-top: 3.5vmin;
 }
 
 ul p{
     font-weight: 700;
+    font-size: 2vmin;
 }
 
 ul a{
     display: block;
-    font-size: 0.85rem;
-    margin-top: 10px;
+    font-size: 1.75vmin;
+    margin-top: 1.5vmin;
     color: #dddddd;
 }
 
@@ -235,30 +282,30 @@ ul a{
     background-color: #222f3d;
     color: white;
     border-top: 0.5px solid rgb(96, 93, 93);
-    height: 70px;
+    height: 9vmin;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.logo{
-    background-image: url("amazon_logo.png");
+.logo img{
+    /* background-image: url("amazon_logo.png"); */
     background-size: cover;
-    height: 50px;
-    width: 100px;
+    height: 8vmin;
+    width: 7vmax;
 }
 
 .foot-panel4{
     background-color: #0f1111;
     color: white;
-    height: 100px;
-    font-size: 0.7rem;
+    height: 15vmin;
+    font-size: 1.5vmin;
     text-align: center;
 }
 
 .pages{  
-    padding-top: 25px;
+    padding-top: 3.5vmin;
 }
 .copyright{
-    padding-top: 5px;
+    padding-top: 0.75vmin;
 }
